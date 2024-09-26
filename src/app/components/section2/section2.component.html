@@ -1,0 +1,90 @@
+<section class="bg-white dark:bg-gray-900">
+    <!--<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">-->
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+      <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
+        <h2
+          class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+        >
+          Nuestros Conferencistas
+        </h2>
+        <p
+          class="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"
+        >
+          Te presentamos a los expertos que liderarán las sesiones de nuestro
+          Bootcamp y Hackaton de Ciberseguridad. Con una vasta experiencia en la
+          industria, cada uno de ellos te brindará conocimientos únicos y
+          estrategias clave para convertirte en un profesional en ciberseguridad.
+        </p>
+      </div>
+      <div class="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        <!--Conferencista 1-->
+        <div
+          *ngFor="let conferencista of conferencistas"
+          class="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700"
+          >
+        
+          <a href="#">
+            <img
+              class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+              [src]="conferencista.foto"
+              [alt]="conferencista.nombre"
+            />
+          </a>
+          <div class="p-5">
+            <h3
+              class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
+              <a href="#">{{ conferencista.nombre }}</a>
+            </h3>
+            <span class="text-gray-500 dark:text-gray-400">
+              {{ conferencista.perfil }}
+            </span>
+            <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400"></p>
+            <ul class="flex space-x-4 sm:mt-0">
+              <li>
+                <a
+                  [href]="conferencista.linkedin"
+                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M19 0h-14c-2.762 0-5 2.238-5 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.762-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.271c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.271h-3v-5.556c0-1.325-.027-3.029-1.844-3.029-1.848 0-2.131 1.445-2.131 2.938v5.647h-3v-10h2.884v1.367h.042c.402-.761 1.383-1.562 2.846-1.562 3.044 0 3.607 2.005 3.607 4.614v5.581z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  [href]="conferencista.linkedin"
+                  class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
